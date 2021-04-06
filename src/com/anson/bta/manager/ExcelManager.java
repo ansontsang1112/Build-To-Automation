@@ -1,5 +1,6 @@
 package com.anson.bta.manager;
 
+import com.anson.bta.ui.diagUI;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -11,8 +12,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ExcelManager {
 
@@ -25,10 +24,10 @@ public class ExcelManager {
     public static HSSFSheet sheetManager(String path, String file) throws IOException {
         try {
             if(!file.contains(".xls")) {
-                throw new Exception("Extension should contain .xls");
+                diagUI.errorBox("請放置 xls 檔案", "檔案類型錯誤");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            diagUI.errorBox(e.getMessage(), "系統故障");
         }
 
         FileInputStream fis = new FileInputStream(new File(path+"\\"+file));

@@ -1,6 +1,7 @@
 package com.anson.bta.manager;
 
 import com.anson.bta.main.Global;
+import com.anson.bta.ui.diagUI;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -32,14 +33,11 @@ public class InitManager {
             //Write into the file
             try {
                 FileWriter writer = new FileWriter(foodType);
-                writer.write("CINNAMON ROLL\nBROWN SUGAR LOAF\nCONDENSED MILK AND PEANUT BUTTER\nCROISSANT\n" +
-                        "OMNIPORK LUNCHEON & EGG CHEESY T\nHAM & EGG CHEESY TOASTIE\nCORN AND CHEESY CHAMPIGNON TOAST\nCRAYFISH & EGG\n" +
-                        "CHICKEN & PINEAPPLE\nOMNIPORK LUNCHEON & EGG MAYO C\nNEW YORK CHEESECAKE\nCOOKIES&CREAM CHEESECAKE\nBLUEBERRY CHEESECAKE"
-                );
+                writer.write(Global.defaultFoodList);
                 writer.close();
             } catch (IOException e) {
                 systemFileStatus = false;
-                e.printStackTrace();
+                diagUI.errorBox(e.getMessage(), "系統故障");
             }
 
         }
