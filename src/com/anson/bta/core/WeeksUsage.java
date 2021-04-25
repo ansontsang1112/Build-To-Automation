@@ -32,7 +32,11 @@ public class WeeksUsage {
         Map<String, Double> map = new HashMap<>();
         for(String food : foodList) {
             for(int i = 6; i < 8; i++) {
-                map.put(food, (double) Math.round(Utils.averageCalculator(5, itemWeekUsage(food, rawData, i))));
+                if(Utils.averageCalculator(5, itemWeekUsage(food, rawData, i)) <= 1) {
+                    map.put(food, Math.ceil(Utils.averageCalculator(5, itemWeekUsage(food, rawData, i))));
+                } else {
+                    map.put(food, (double) Math.round(Utils.averageCalculator(5, itemWeekUsage(food, rawData, i))));
+                }
             }
         }
         return map;

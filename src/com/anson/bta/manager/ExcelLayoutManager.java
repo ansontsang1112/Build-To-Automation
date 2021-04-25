@@ -53,7 +53,8 @@ public class ExcelLayoutManager {
         //Food Types
         for(String food : Global.defaultFoodListinChinese.split("\n")) {
             if(food.equalsIgnoreCase( "小龍蝦蛋沙律意式飽") || food.equalsIgnoreCase("雞肉菠蘿意式飽") || food.equalsIgnoreCase("新餐肉芝味多士") ||
-                    food.equalsIgnoreCase("火腿扒碎蛋芝味多士") || food.equalsIgnoreCase("蘑菇粟米芝味多士") || food.equalsIgnoreCase("新餐肉蛋沙律意式飽")) {
+                    food.equalsIgnoreCase("火腿扒碎蛋芝味多士") || food.equalsIgnoreCase("蘑菇粟米芝味多士") || food.equalsIgnoreCase("新餐肉蛋沙律意式飽") ||
+            food.equalsIgnoreCase("新餐肉芝味卷/薄餅")) {
                 ExcelGenerationManager.createCell(foodRowCounter, 6, "不適用");
                 ExcelGenerationManager.createCell(foodRowCounter, 9, "不適用");
                 ExcelGenerationManager.setFontSize(foodRowCounter,6,10);
@@ -78,9 +79,9 @@ public class ExcelLayoutManager {
         int foodRowCounter = 6;
         //Food Types
         for(String food : Global.defaultFoodList.split("\n")) {
-            if(food.equalsIgnoreCase( "CRAYFISH & EGG") || food.equalsIgnoreCase("CHICKEN & PINEAPPLE") || food.equalsIgnoreCase("OMNIPORK LUNCHEON & EGG CHEESY T") ||
+            if(food.equalsIgnoreCase( "CRAYFISH & EGG") || food.equalsIgnoreCase("CHICKEN & PINEAPPLE") || food.equalsIgnoreCase("OMNIPORK LUNCHEON & EGG CHEESY") ||
                     food.equalsIgnoreCase("HAM & EGG CHEESY TOASTIE") || food.equalsIgnoreCase("CORN AND CHEESY CHAMPIGNON TOAST") ||
-                    food.equalsIgnoreCase("OMNIPORK LUNCHEON & EGG MAYO C")) {
+                    food.equalsIgnoreCase("OMNIPORK LUNCHEON & EGG MAYO") || food.equalsIgnoreCase("MEAT CHEESY PIZZA")) {
 
                 ExcelGenerationManager.createCell(foodRowCounter, 4, Math.round((Double) (WeeksUsage.averageItemUsagePerWeekDay(CategoryManager.foodCategory, data).get(food))*0.7));
                 ExcelGenerationManager.createCell(foodRowCounter, 5, Math.round((Double) (WeeksUsage.averageItemUsagePerWeekDay(CategoryManager.foodCategory, data).get(food))*0.3));

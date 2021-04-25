@@ -13,12 +13,12 @@ public class Global {
             "BROWN SUGAR LOAF\n" +
             "CONDENSED MILK AND PEANUT BUTTER\n" +
             "CROISSANT\n" +
-            "OMNIPORK LUNCHEON & EGG CHEESY T\n" +
+            "OMNIPORK LUNCHEON & EGG CHEESY\n" +
             "HAM & EGG CHEESY TOASTIE\n" +
             "CORN AND CHEESY CHAMPIGNON TOAST\n" +
             "CRAYFISH & EGG\n" +
             "CHICKEN & PINEAPPLE\n" +
-            "OMNIPORK LUNCHEON & EGG MAYO C\n" +
+            "OMNIPORK LUNCHEON & EGG MAYO\n" +
             "NEW YORK CHEESECAKE\n" +
             "COOKIES&CREAM CHEESECAKE\n" +
             "BLUEBERRY CHEESECAKE\n" +
