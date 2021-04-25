@@ -35,10 +35,10 @@ public class ExcelLayoutManager {
         }
 
         for(int i = 4; i < 10; i++) {
-            if(i%4==0) {
+            if(i==4 || i==7) {
                 ExcelGenerationManager.createCell(4,i, "日班");
                 ExcelGenerationManager.setAlignCenter(4, i);
-            } else if(i%5==0) {
+            } else if(i==5 || i==8) {
                 ExcelGenerationManager.createCell(4,i, "夜班");
                 ExcelGenerationManager.setAlignCenter(4, i);
             } else {

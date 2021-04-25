@@ -1,6 +1,9 @@
 package com.anson.bta.manager;
 
+import com.anson.bta.main.Global;
+import com.anson.bta.main.Utils;
 import com.anson.bta.ui.diagUI;
+import jdk.jshell.execution.Util;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -65,9 +68,12 @@ public class ExcelManager {
     }
 
     protected static Double readSpecificNumericCell(Sheet sheet, int vRow, int vColumn) {
+        double value;
+
         Row row = sheet.getRow(vRow);
         Cell cell = row.getCell(vColumn);
-        double value = cell.getNumericCellValue();
+        value = cell.getNumericCellValue();
+
         return value;
     }
 

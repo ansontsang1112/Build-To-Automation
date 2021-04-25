@@ -3,6 +3,8 @@ package com.anson.bta.main;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Global {
     public static Path folderLocation = Paths.get(System.getProperty("user.dir")+"\\Build-To-Automation");
@@ -19,7 +21,9 @@ public class Global {
             "OMNIPORK LUNCHEON & EGG MAYO C\n" +
             "NEW YORK CHEESECAKE\n" +
             "COOKIES&CREAM CHEESECAKE\n" +
-            "BLUEBERRY CHEESECAKE";
+            "BLUEBERRY CHEESECAKE\n" +
+            "MEAT CHEESY PIZZA\n" +
+            "CHOCOLATE FUDGE";
 
     public static String defaultFoodListinChinese = "提子肉桂卷\n" +
             "黑糖全麥飽\n" +
@@ -33,7 +37,11 @@ public class Global {
             "新餐肉蛋沙律意式飽\n" +
             "紐約芝士蛋糕\n" +
             "曲奇妙趣芝士蛋糕\n" +
-            "藍莓芝士蛋糕";
+            "藍莓芝士蛋糕\n" +
+            "新餐肉芝味卷/薄餅\n" +
+            "特濃朱古力蛋糕";
+
+    public static Map<String, Integer> antiZeroCounter = new HashMap<>();
 
     public static String resultWorkBookName = "Build-To-Automation-ResultFile";
 }

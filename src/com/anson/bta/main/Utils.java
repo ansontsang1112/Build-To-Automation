@@ -5,10 +5,19 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 
 import java.io.File;
+import java.util.Map;
 
 public class Utils {
     public static Double averageCalculator(int count, double data) {
         return data/count;
+    }
+
+    public static Integer antiZeroCounterManager(String filter) {
+        if(Global.antiZeroCounter.get(filter) != null) {
+            return Global.antiZeroCounter.get(filter).intValue();
+        } else {
+            return 0;
+        }
     }
 
     public static boolean isFileExistInDirectory(String path, String fileName) {

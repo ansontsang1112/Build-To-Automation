@@ -32,6 +32,7 @@ public class Main {
             ExcelLayoutManager.notApplicableManager();
             ExcelLayoutManager.dataManager(dataList);
 
+
             diagUI.informationBox("資料處理完畢並已經匯出到 " + Global.folderLocation+"\\Build-To-Automation-ResultFile.xls", "系統操作完成");
         } else {
             diagUI.informationBox("請「Product Mix by Date」檔案放到 " + Global.folderLocation+"\\Data", "放置資料");

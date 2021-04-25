@@ -39,7 +39,7 @@ public class FullDataAnalyse {
             resultPerDay.add(foodsMap);
             list.add(resultPerDay);
         }
-
+        
         return list;
     }
 }
